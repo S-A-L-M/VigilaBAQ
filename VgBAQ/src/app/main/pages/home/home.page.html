@@ -1,0 +1,144 @@
+<ion-content [fullscreen]="true" class="bg-gradient-to-br from-gray-50 to-blue-50/30">
+  <!-- Header que se colapsa al hacer scroll -->
+  <ion-header collapse="condense" class="ion-no-border">
+    <ion-toolbar class="bg-gradient-to-r from-blue-500 to-purple-600 backdrop-blur-sm">
+      <div class="flex items-center px-4 py-3">
+        <div class="bg-white/20 p-2 rounded-full mr-3">
+          <ion-icon name="diamond" class="text-white text-xl"></ion-icon>
+        </div>
+        <ion-title size="large" class="text-white font-bold">Inicio</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenido de la página Home con padding superior e inferior -->
+  <div class="px-4 pt-6 pb-24 max-w-4xl mx-auto">
+    <div class="space-y-6">
+      
+      <!-- Card de bienvenida con gradiente -->
+      <ion-card class="shadow-lg rounded-2xl border-0 overflow-hidden bg-gradient-to-r from-blue-500 to-purple-600">
+        <ion-card-content class="p-6">
+          <div class="flex items-center justify-between">
+            <div class="text-white">
+              <h2 class="text-2xl font-bold mb-2">¡Bienvenido!</h2>
+              <p class="text-white/80 text-sm mb-4">Dashboard Principal</p>
+              <p class="text-white/90 text-base">Este es el contenido principal de tu aplicación de inicio.</p>
+            </div>
+            <div class="hidden sm:block">
+              <ion-icon name="sparkles" class="text-white/30 text-6xl"></ion-icon>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Grid de opciones mejorado -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ion-card class="shadow-md rounded-xl border-0 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white">
+          <ion-card-content class="text-center p-6">
+            <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <ion-icon name="analytics" class="text-blue-600 text-3xl"></ion-icon>
+            </div>
+            <h3 class="font-bold text-gray-800 text-lg mb-2">Estadísticas</h3>
+            <p class="text-sm text-gray-600">Ver métricas y análisis</p>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="shadow-md rounded-xl border-0 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white">
+          <ion-card-content class="text-center p-6">
+            <div class="bg-purple-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <ion-icon name="settings" class="text-purple-600 text-3xl"></ion-icon>
+            </div>
+            <h3 class="font-bold text-gray-800 text-lg mb-2">Configuración</h3>
+            <p class="text-sm text-gray-600">Ajustes y preferencias</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <!-- Lista de elementos recientes mejorada -->
+      <ion-card class="shadow-md rounded-xl border-0 bg-white">
+        <ion-card-header class="pb-2">
+          <div class="flex items-center justify-between">
+            <ion-card-title class="text-gray-800 text-xl font-bold">Actividad Reciente</ion-card-title>
+            <ion-button fill="clear" size="small" class="text-blue-600">
+              <ion-icon name="chevron-forward" slot="end"></ion-icon>
+              Ver todo
+            </ion-button>
+          </div>
+        </ion-card-header>
+        
+        <ion-card-content class="p-0">
+          <ion-list class="bg-transparent">
+            
+            <ion-item lines="none" class="py-4 hover:bg-gray-50 transition-colors duration-200">
+              <div slot="start" class="bg-green-100 p-3 rounded-full mr-4">
+                <ion-icon name="checkmark-circle" class="text-green-600 text-xl"></ion-icon>
+              </div>
+              <ion-label>
+                <h2 class="font-semibold text-gray-800 text-base mb-1">Tarea completada</h2>
+                <p class="text-sm text-gray-500">Hace 2 horas</p>
+              </ion-label>
+              <ion-note slot="end" class="text-green-600 font-medium">✓</ion-note>
+            </ion-item>
+            
+            <ion-item lines="none" class="py-4 hover:bg-gray-50 transition-colors duration-200">
+              <div slot="start" class="bg-blue-100 p-3 rounded-full mr-4">
+                <ion-icon name="mail" class="text-blue-600 text-xl"></ion-icon>
+              </div>
+              <ion-label>
+                <h2 class="font-semibold text-gray-800 text-base mb-1">Nuevo mensaje</h2>
+                <p class="text-sm text-gray-500">Hace 5 horas</p>
+              </ion-label>
+              <div slot="end" class="bg-blue-500 w-3 h-3 rounded-full"></div>
+            </ion-item>
+            
+            <ion-item lines="none" class="py-4 hover:bg-gray-50 transition-colors duration-200">
+              <div slot="start" class="bg-orange-100 p-3 rounded-full mr-4">
+                <ion-icon name="document" class="text-orange-600 text-xl"></ion-icon>
+              </div>
+              <ion-label>
+                <h2 class="font-semibold text-gray-800 text-base mb-1">Documento actualizado</h2>
+                <p class="text-sm text-gray-500">Ayer</p>
+              </ion-label>
+              <ion-note slot="end" class="text-gray-400">📄</ion-note>
+            </ion-item>
+            
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Sección adicional de acciones rápidas -->
+      <ion-card class="shadow-md rounded-xl border-0 bg-white">
+        <ion-card-header class="pb-3">
+          <ion-card-title class="text-gray-800 text-xl font-bold">Acciones Rápidas</ion-card-title>
+        </ion-card-header>
+        
+        <ion-card-content>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            
+            <button class="flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200">
+              <ion-icon name="add-circle" class="text-blue-600 text-2xl mb-2"></ion-icon>
+              <span class="text-xs font-medium text-gray-700">Crear</span>
+            </button>
+            
+            <button class="flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200">
+              <ion-icon name="share" class="text-green-600 text-2xl mb-2"></ion-icon>
+              <span class="text-xs font-medium text-gray-700">Compartir</span>
+            </button>
+            
+            <button class="flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200">
+              <ion-icon name="download" class="text-purple-600 text-2xl mb-2"></ion-icon>
+              <span class="text-xs font-medium text-gray-700">Descargar</span>
+            </button>
+            
+            <button class="flex flex-col items-center p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-200">
+              <ion-icon name="help-circle" class="text-orange-600 text-2xl mb-2"></ion-icon>
+              <span class="text-xs font-medium text-gray-700">Ayuda</span>
+            </button>
+            
+          </div>
+        </ion-card-content>
+      </ion-card>
+      
+    </div>
+  </div>
+</ion-content>
