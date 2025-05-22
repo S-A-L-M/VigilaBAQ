@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonRouterOutlet, IonButton, IonIcon, ActionSheetController, MenuController, IonTabs, IonTabBar, IonTabButton, IonLabel, IonBadge, IonAvatar, IonCard, IonCardTitle, IonCardSubtitle, IonCardContent, IonCardHeader, IonItem, IonNote, IonList } from '@ionic/angular/standalone';
-import { Router } from '@angular/router';
+
+import { addIcons } from 'ionicons';
+import { logoIonic, homeOutline, notificationsOutline, settingsOutline, searchOutline, heartOutline, personOutline, shieldOutline } from 'ionicons/icons';
+import { IonHeader, IonIcon, IonButton, IonToolbar, IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.page.html',
   styleUrls: ['./main.page.scss'],
   standalone: true,
-  imports: [ IonAvatar, IonBadge, IonLabel, IonTabButton, IonTabBar, IonTabs, IonIcon, IonButton, IonRouterOutlet, IonHeader, IonToolbar, CommonModule, FormsModule]
+  imports: [IonLabel, IonTabButton, IonTabBar, IonRouterOutlet, IonToolbar, IonButton, IonIcon, IonHeader, ]
 })
 export class MainPage implements OnInit {
 
-  constructor(
-    private router: Router,
-    private menuController: MenuController,
-    private actionSheetController: ActionSheetController
-  ) { }
+  constructor() {
+    addIcons({homeOutline,notificationsOutline,settingsOutline,shieldOutline,searchOutline,heartOutline,personOutline,logoIonic});
+  }
 
   ngOnInit() {
   }

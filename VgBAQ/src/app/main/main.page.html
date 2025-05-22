@@ -1,60 +1,53 @@
-<!-- Header Superior Translúcido -->
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar class="bg-gradient-to-r from-blue-500 to-purple-600 backdrop-blur-sm">
-    <div class="flex items-center justify-between px-4 py-2">
-      <!-- Logo y Nombre -->
-      <div class="flex items-center space-x-3">
-        <div class="bg-white/20 p-2 rounded-full">
-          <ion-icon name="diamond" class="text-white text-xl"></ion-icon>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-white font-bold text-lg">MiApp</span>
-          <span class="text-white/80 text-xs">Dashboard</span>
-        </div>
-      </div>
-      
-      <!-- Profile en la esquina derecha -->
-      <ion-button fill="clear" class="text-white hover:bg-white/10 rounded-full p-1">
-        <ion-avatar slot="icon-only" class="w-8 h-8 border-2 border-white/30">
-          <img src="/api/placeholder/40/40" alt="Profile" class="rounded-full">
-        </ion-avatar>
-      </ion-button>
-    </div>
-  </ion-toolbar>
-</ion-header>
+<!-- main.page.html -->
+<div class="flex flex-col h-full">
 
-<ion-tabs>
-  <ion-router-outlet></ion-router-outlet>
-  
-  <ion-tab-bar slot="bottom" class="bg-white border-t border-gray-100 shadow-lg pb-safe">
-    
-    <ion-tab-button tab="home" class="transition-all duration-200 hover:bg-blue-50">
-      <ion-icon name="home" class="text-xl text-gray-600"></ion-icon>
-      <ion-label class="text-xs font-medium text-gray-700">Inicio</ion-label>
-    </ion-tab-button>
-    
-    <ion-tab-button tab="search" class="transition-all duration-200 hover:bg-blue-50">
-      <ion-icon name="search" class="text-xl text-gray-600"></ion-icon>
-      <ion-label class="text-xs font-medium text-gray-700">Buscar</ion-label>
-    </ion-tab-button>
-    
-    <ion-tab-button tab="favorites" class="transition-all duration-200 hover:bg-blue-50">
-      <ion-icon name="heart" class="text-xl text-gray-600"></ion-icon>
-      <ion-label class="text-xs font-medium text-gray-700">Favoritos</ion-label>
-    </ion-tab-button>
-    
-    <ion-tab-button tab="notifications" class="transition-all duration-200 hover:bg-blue-50 relative">
-      <div class="relative">
-        <ion-icon name="notifications" class="text-xl text-gray-600"></ion-icon>
-        <ion-badge color="danger" class="absolute -top-2 -right-2 min-w-5 h-5 text-xs flex items-center justify-center rounded-full bg-red-500 text-white shadow-sm">3</ion-badge>
+  <ion-header translucent="true">
+    <ion-toolbar>
+      <div class="flex items-center justify-between px-4 py-2">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: var(--ion-color-primary);">
+            <ion-icon name="home-outline" class="text-lg"></ion-icon>
+          </div>
+          <h1 class="font-bold text-xl tracking-wide" style="color: black;">Mi App</h1>
+        </div>
+        
+        <div class="flex items-center space-x-3">
+          <ion-button fill="clear" size="small">
+            <ion-icon name="notifications-outline" slot="icon-only" style="color: black;"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" size="small">
+            <ion-icon name="settings-outline" slot="icon-only" style="color: black;"></ion-icon>
+          </ion-button>
+        </div>
       </div>
-      <ion-label class="text-xs font-medium text-gray-700">Avisos</ion-label>
-    </ion-tab-button>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="flex-1 overflow-auto bg-white pt-7 pb-4">
+    <ion-router-outlet class="w-full h-full"></ion-router-outlet>
+  </div>
+
+  <ion-tab-bar class="pb-safe" style="background-color: white;">
     
-    <ion-tab-button tab="profile" class="transition-all duration-200 hover:bg-blue-50">
-      <ion-icon name="person" class="text-xl text-gray-600"></ion-icon>
-      <ion-label class="text-xs font-medium text-gray-700">Perfil</ion-label>
+    <ion-tab-button tab="home" href="/home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label style="color: black;">Inicio</ion-label>
     </ion-tab-button>
-    
+
+    <ion-tab-button tab="security" href="/security">
+      <ion-icon name="shield-outline"></ion-icon>
+      <ion-label style="color: black;">Seguridad</ion-label>
+    </ion-tab-button>
+    <ion-tab-button disabled="true">
+      <ion-icon name="search-outline" style="color: #ccc;"></ion-icon>
+      <ion-label style="color: #ccc;">Buscar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button disabled="true">
+      <ion-icon name="heart-outline" style="color: #ccc;"></ion-icon>
+      <ion-label style="color: #ccc;">Favoritos</ion-label>
+    </ion-tab-button>
+
   </ion-tab-bar>
-</ion-tabs>
+  
+</div>

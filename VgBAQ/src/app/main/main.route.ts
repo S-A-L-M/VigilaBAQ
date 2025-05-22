@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { NotfoundPage } from '../shared/notfound/notfound.page';
 import { SecurityPage } from './pages/security/security.page';
 import { MainPage } from './main.page';
 import { HomePage } from './pages/home/home.page';
@@ -14,6 +13,6 @@ export const routes: Routes = [
       { path: 'security', component: SecurityPage }
     ]
   },
-  { path: '404', component: NotfoundPage },
-  { path: '**', redirectTo: '404' }
+  // { path: '404', component: NotfoundPage },
+  // { path: '**', redirectTo: '404' }
 ];
