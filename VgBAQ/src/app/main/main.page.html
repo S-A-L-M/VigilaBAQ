@@ -1,53 +1,48 @@
-<!-- main.page.html -->
-<div class="flex flex-col h-full">
-
-  <ion-header translucent="true">
-    <ion-toolbar>
-      <div class="flex items-center justify-between px-4 py-2">
-        <div class="flex items-center space-x-3">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: var(--ion-color-primary);">
-            <ion-icon name="home-outline" class="text-lg"></ion-icon>
-          </div>
-          <h1 class="font-bold text-xl tracking-wide" style="color: black;">Mi App</h1>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="flex items-center justify-between px-4 py-2">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center"style="background-color: var(--ion-color-primary);">
+          <ion-icon name="home-outline" class="text-lg"></ion-icon>
         </div>
-        
-        <div class="flex items-center space-x-3">
-          <ion-button fill="clear" size="small">
-            <ion-icon name="notifications-outline" slot="icon-only" style="color: black;"></ion-icon>
-          </ion-button>
-          <ion-button fill="clear" size="small">
-            <ion-icon name="settings-outline" slot="icon-only" style="color: black;"></ion-icon>
-          </ion-button>
-        </div>
+        <h1 class="font-bold text-xl tracking-wide">Mi App</h1>
       </div>
-    </ion-toolbar>
-  </ion-header>
 
-  <div class="flex-1 overflow-auto bg-white pt-7 pb-4">
-    <ion-router-outlet class="w-full h-full"></ion-router-outlet>
-  </div>
+      <div class="flex items-center space-x-3">
+        <ion-button fill="clear" size="small">
+          <ion-icon name="notifications-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" size="small">
+          <ion-icon name="settings-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-tab-bar class="pb-safe" style="background-color: white;">
-    
-    <ion-tab-button tab="home" href="/home">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label style="color: black;">Inicio</ion-label>
-    </ion-tab-button>
+<ion-content [scrollEvents]="true" (ionScroll)="scrolling($event)" class="ion-padding">
+    <ion-router-outlet></ion-router-outlet>
+</ion-content>
 
-    <ion-tab-button tab="security" href="/security">
-      <ion-icon name="shield-outline"></ion-icon>
-      <ion-label style="color: black;">Seguridad</ion-label>
-    </ion-tab-button>
-    <ion-tab-button disabled="true">
-      <ion-icon name="search-outline" style="color: #ccc;"></ion-icon>
-      <ion-label style="color: #ccc;">Buscar</ion-label>
-    </ion-tab-button>
+<ion-tab-bar>
 
-    <ion-tab-button disabled="true">
-      <ion-icon name="heart-outline" style="color: #ccc;"></ion-icon>
-      <ion-label style="color: #ccc;">Favoritos</ion-label>
-    </ion-tab-button>
+  <ion-tab-button tab="home" href="/home">
+    <ion-icon name="home-outline"></ion-icon>
+    <ion-label>Inicio</ion-label>
+  </ion-tab-button>
 
-  </ion-tab-bar>
-  
-</div>
+  <ion-tab-button tab="security" href="/security">
+    <ion-icon name="shield-outline"></ion-icon>
+    <ion-label>Seguridad</ion-label>
+  </ion-tab-button>
+  <ion-tab-button disabled="true">
+    <ion-icon name="search-outline"></ion-icon>
+    <ion-label>Buscar</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button disabled="true">
+    <ion-icon name="heart-outline"></ion-icon>
+    <ion-label>Favoritos</ion-label>
+  </ion-tab-button>
+
+</ion-tab-bar>

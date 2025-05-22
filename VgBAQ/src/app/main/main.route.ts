@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: MainPage,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomePage },
+      { path: 'home', loadComponent: () => import('./pages/home/home.page').then(m => m.HomePage) },
       { path: 'security', component: SecurityPage }
     ]
   },
