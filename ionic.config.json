@@ -1,0 +1,7 @@
+{
+  "name": "VgBAQ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
