@@ -1,4 +1,3 @@
-https://ibb.co/gL18PGqv
 # Ionic 8 + Angular 19 Standalone + TailwindCSS 4
 
 A modern, clean, and production-ready Ionic Angular starter template with the latest dependencies and Tailwind CSS 4 integration.
