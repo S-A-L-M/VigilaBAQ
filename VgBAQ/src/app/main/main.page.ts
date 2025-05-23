@@ -2,14 +2,14 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
 import { addIcons } from 'ionicons';
 import { logoIonic, homeOutline, notificationsOutline, settingsOutline, searchOutline, heartOutline, personOutline, shieldOutline } from 'ionicons/icons';
-import { IonHeader, IonIcon, IonButton, IonToolbar, IonTabBar, IonTabButton, IonLabel, IonContent, IonRouterOutlet } from "@ionic/angular/standalone";
+import { IonHeader, IonIcon, IonButton, IonToolbar, IonTabBar, IonTabButton, IonLabel, IonContent, IonRouterOutlet, IonItem, IonCol, IonRow } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.page.html',
   styleUrls: ['./main.page.scss'],
   standalone: true,
-  imports: [IonRouterOutlet,  IonContent, IonLabel, IonTabButton, IonTabBar, IonToolbar, IonButton, IonIcon, IonHeader, ]
+  imports: [IonRouterOutlet, IonLabel, IonTabButton, IonTabBar, IonToolbar, IonButton, IonIcon, IonHeader, IonContent]
 })
 export class MainPage implements OnInit {
 
@@ -19,19 +19,9 @@ export class MainPage implements OnInit {
     addIcons({homeOutline,notificationsOutline,settingsOutline,shieldOutline,searchOutline,heartOutline,personOutline,logoIonic});
   }
 
-  @HostListener('ionScroll', ['$event'])
-  scrolling($event: any) {
-    console.log("-----scrolling detected--------");
-    const getScrollVal = $event;
-    let scrollElement = getScrollVal.detail;
- }
 
   ngOnInit() {
   }
-
-
-
-
 
 }
 

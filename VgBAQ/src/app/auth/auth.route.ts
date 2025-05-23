@@ -6,6 +6,4 @@ import { NotfoundPage } from '../shared/notfound/notfound.page';
 export const routes: Routes = [
   {path: '',component: LoginPage},
   {path: 'signup',component: SignupPage},
-  {path: '404', component: NotfoundPage},
-  {path: '**', redirectTo: '/404'}
 ];
