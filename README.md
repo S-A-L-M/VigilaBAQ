@@ -28,9 +28,9 @@ A modern, clean, and production-ready Ionic Angular starter template with the la
 
 Before you begin, ensure you have the following installed:
 
-- Node.js (v18.0.0 or higher)
-- npm (v9.0.0 or higher)
-- Ionic CLI (npm install -g @ionic/cli)
+- Node.js `(v20.11.1 or 22)`
+- npm `(v10.0.0 or higher)`
+- Ionic CLI `(npm install -g @ionic/cli --recomended: ^8.0.0 )`
 
 
 ## 1. Clone the Repository
