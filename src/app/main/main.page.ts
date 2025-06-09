@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonToolbar, IonButton, IonIcon, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel } from '@ionic/angular/standalone';import { addIcons } from 'ionicons';
-;
+import { IonContent, IonRouterOutlet } from '@ionic/angular/standalone';
+import { HeaderComponent } from "../shared/header/header.component";
+import { TabBarComponent } from "../shared/tab-bar/tab-bar.component";
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.page.html',
   styleUrls: ['./main.page.scss'],
   standalone: true,
-  imports: [IonLabel, IonTabButton, IonTabBar, IonRouterOutlet, IonIcon, IonButton, IonContent, IonHeader, IonToolbar, CommonModule, FormsModule]
+  imports: [IonRouterOutlet, IonContent, CommonModule, FormsModule, HeaderComponent, TabBarComponent]
 })
 export class MainPage implements OnInit {
 
