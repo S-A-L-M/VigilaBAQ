@@ -1,61 +1,73 @@
 <ion-content [fullscreen]="true" class="ion-no-padding">
+  <div class="min-h-screen flex flex-col bg-gradient-to-br from-slate-800 via-blue-900 to-indigo-900 relative overflow-hidden">
 
-  <div class="min-h-screen flex flex-col bg-gradient-to-br from-red-400 via-red-500 to-red-600 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-40 h-40 bg-blue-400/10 rounded-full -m-20 animate-pulse"></div>
+    <div class="absolute bottom-32 right-0 w-32 h-32 bg-indigo-400/5 rounded-full -m-16"></div>
+    <div class="absolute top-1/4 right-4 w-20 h-20 bg-blue-300/10 rounded-full -m-10"></div>
 
-    <div class="flex-1 flex items-center justify-center px-4 py-8 relative z-10">
-      <div class="w-full max-w-sm h-full">
-        <swiper-container #swiper autoplay="true" autoplay-delay="2000" loop="true" class="w-full h-full"
-          style="--swiper-pagination-color: rgba(255,255,255,0.9); --swiper-pagination-bullet-inactive-color: rgba(255,255,255,0.3); --swiper-pagination-bullet-size: 8px; --swiper-pagination-bottom: 30px;">
+    <div class="absolute top-1/2 left-0 w-24 h-24 bg-cyan-400/8 rounded-full -m-12"></div>
 
-          <swiper-slide class="w-full h-full flex flex-col items-center justify-center text-center px-6">
-            <div class="relative mb-6">
-              <ion-icon name="headset-outline" class="text-white text-7xl drop-shadow-2xl">
-              </ion-icon>
+    <div class="absolute top-12 left-1/2 transform -translate-x-1/2 z-20">
+      <div class="bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20">
+        <p class="text-white/80 text-xs font-medium tracking-wide">SOLUCIÓN EMPRESARIAL</p>
+      </div>
+    </div>
+
+    <div class="flex-1 flex items-center justify-center px-6 py-16 relative z-10">
+      <div class="w-full max-w-sm">
+        <swiper-container #swiper 
+          autoplay="true" 
+          autoplay-delay="4500" 
+          loop="true" 
+          pagination="true"
+          class="w-full h-96"
+          style="--swiper-pagination-color: rgba(255,255,255,0.9); --swiper-pagination-bullet-inactive-color: rgba(255,255,255,0.3); --swiper-pagination-bullet-size: 10px; --swiper-pagination-bottom: 24px;">
+
+          <swiper-slide class="w-full h-full flex flex-col items-center justify-center text-center px-8">
+            <div class="relative mb-8">
+              <div class="w-24 h-24 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-2xl flex items-center justify-center backdrop-blur-sm mb-4 border border-white/10">
+                <ion-icon name="people-outline" class="text-white text-5xl"></ion-icon>
+              </div>
+              <div class="absolute -top-2 -right-2 bg-green-500 rounded-full w-6 h-6 flex items-center justify-center">
+                <ion-icon name="checkmark" class="text-white text-sm"></ion-icon>
+              </div>
             </div>
-            <h3 class="text-white text-xl font-bold mb-3 drop-shadow-lg">Soporte 24/7</h3>
-            <p class="text-white/90 text-base leading-relaxed drop-shadow max-w-xs">
-              Asistencia especializada disponible en cualquier momento
+            <h2 class="text-white text-2xl font-bold mb-4 drop-shadow-lg">Soporte Especializado</h2>
+            <p class="text-white/90 text-base leading-relaxed drop-shadow text-center max-w-xs">
+              Equipo certificado disponible <span class="font-semibold text-cyan-200">24/7</span> para tu empresa
             </p>
           </swiper-slide>
 
-          <swiper-slide class="w-full h-full flex flex-col items-center justify-center text-center px-6">
-            <div class="relative mb-6">
-              <ion-icon name="time-outline" class="text-white text-7xl drop-shadow-2xl">
-              </ion-icon>
-              <div class="absolute -top-2 -right-2 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <ion-icon name="checkmark" class="text-lg text-white"></ion-icon>
+          <swiper-slide class="w-full h-full flex flex-col items-center justify-center text-center px-8">
+            <div class="relative mb-8">
+              <div class="w-24 h-24 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-2xl flex items-center justify-center backdrop-blur-sm mb-4 border border-white/10">
+                <ion-icon name="analytics-outline" class="text-white text-5xl"></ion-icon>
+              </div>
+              <div class="absolute -top-1 -right-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full px-2 py-1">
+                <span class="text-white text-xs font-bold">AI</span>
               </div>
             </div>
-            <h3 class="text-white text-xl font-bold mb-3 drop-shadow-lg">Tiempo Real</h3>
-            <p class="text-white/90 text-base leading-relaxed drop-shadow max-w-xs">
-              Respuestas inmediatas para resolver tus problemas
-            </p>
-          </swiper-slide>
-          <swiper-slide class="w-full h-full flex flex-col items-center justify-center text-center px-6">
-            <div class="relative mb-6">
-              <ion-icon name="phone-portrait-outline" class="text-white text-7xl drop-shadow-2xl">
-              </ion-icon>
-              <div class="absolute -top-2 -right-2 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <ion-icon name="heart" class="text-lg text-white"></ion-icon>
-              </div>
-            </div>
-            <h3 class="text-white text-xl font-bold mb-3 drop-shadow-lg">Fácil de Usar</h3>
-            <p class="text-white/90 text-base leading-relaxed drop-shadow max-w-xs">
-              Interfaz intuitiva diseñada para una mejor experiencia
+            <h2 class="text-white text-2xl font-bold mb-4 drop-shadow-lg">
+              <span class="text-white">Tecnología</span><br>
+              <span class="text-cyan-300 font-extrabold">Inteligente</span>
+            </h2>
+            <p class="text-white/90 text-base leading-relaxed drop-shadow text-center max-w-xs">
+              IA avanzada para <span class="font-semibold">diagnóstico automático</span> y resolución rápida
             </p>
           </swiper-slide>
 
-          <swiper-slide class="w-full h-full flex flex-col items-center justify-center text-center px-6">
-            <div class="relative mb-6">
-              <ion-icon name="analytics-outline" class="text-white text-7xl drop-shadow-2xl">
-              </ion-icon>
-              <div class="absolute -top-2 -right-2 w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <ion-icon name="trending-up" class="text-lg text-white"></ion-icon>
+          <swiper-slide class="w-full h-full flex flex-col items-center justify-center text-center px-8">
+            <div class="relative mb-8">
+              <div class="w-24 h-24 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-2xl flex items-center justify-center backdrop-blur-sm mb-4 border border-white/10">
+                <ion-icon name="business-outline" class="text-white text-5xl"></ion-icon>
+              </div>
+              <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-emerald-500 rounded-full px-3 py-1">
+                <span class="text-white text-xs font-bold">99.9%</span>
               </div>
             </div>
-            <h3 class="text-white text-xl font-bold mb-3 drop-shadow-lg">Reportes Inteligentes</h3>
-            <p class="text-white/90 text-base leading-relaxed drop-shadow max-w-xs">
-              Análisis detallados para optimizar tu experiencia
+            <h2 class="text-white text-2xl font-bold mb-4 drop-shadow-lg">Gestión Avanzada</h2>
+            <p class="text-white/90 text-base leading-relaxed drop-shadow text-center max-w-xs">
+              Dashboard completo con <span class="font-semibold text-emerald-200">métricas en tiempo real</span> y reportes
             </p>
           </swiper-slide>
 
@@ -63,34 +75,109 @@
       </div>
     </div>
 
-    <ion-card class="bg-slate-800 rounded-t-3xl rounded-b-none m-0 px-8 pt-7 relative shadow-2xl">
-      <div class="w-12 h-1 bg-gray-600 rounded-full mx-auto mb-6"></div>
-      <ion-card-header class="text-center mb-4 px-0 pb-4">
-        <ion-card-title class="text-2xl font-bold text-white leading-tight mb-2">
-          Soporte inteligente
-        </ion-card-title>
-        <ion-text class="block mb-3">
-          <h1 class="text-2xl font-bold text-lime-400">en tiempo real</h1>
-        </ion-text>
-        <ion-card-subtitle class="text-slate-300 text-base leading-relaxed max-w-sm mx-auto">
-          Reporta fallas rápidamente y recibe soporte especializado. Todo diseñado para una mejor experiencia.
-        </ion-card-subtitle>
-      </ion-card-header>
-
-      <div class="flex flex-col gap-3 max-w-sm mx-auto">
-        <ion-button expand="block" size="large" shape="round" color="primary"
-          class="h-14 font-bold text-sm tracking-wide" (click)="onLogin()">
-          <ion-label>INICIAR SESIÓN</ion-label>
-        </ion-button>
-
-        <ion-button expand="block" size="large" fill="outline" shape="round" color="primary"
-          class="h-14 font-bold text-sm tracking-wide" (click)="onRegister()">
-          <ion-label class="text-blue-500 font-bold">REGISTRARSE</ion-label>
-        </ion-button>
+    <div class="relative z-10 px-6 mb-4">
+      <div class="flex justify-center items-center space-x-6 mb-6">
+        <div class="flex items-center space-x-2">
+          <ion-icon name="shield-checkmark" class="text-green-400 text-lg"></ion-icon>
+          <span class="text-white/70 text-xs font-medium">ISO 27001</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <ion-icon name="time" class="text-blue-400 text-lg"></ion-icon>
+          <span class="text-white/70 text-xs font-medium">SLA 99.9%</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <ion-icon name="people" class="text-purple-400 text-lg"></ion-icon>
+          <span class="text-white/70 text-xs font-medium">500+ Empresas</span>
+        </div>
       </div>
+    </div>
 
-    </ion-card>
-
+    <div class="relative z-10 p-6 pb-8">
+      <ion-button 
+        id="open-modal" 
+        expand="block" 
+        (click)="openModal()" 
+        class="h-16 text-lg font-bold shadow-2xl"
+        style="--background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); --background-activated: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); --background-hover: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); --color: white; --border-radius: 16px; --box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
+        <ion-icon name="rocket-outline" slot="start"></ion-icon>
+        Empieza Ya
+        <ion-icon name="arrow-forward" slot="end"></ion-icon>
+      </ion-button>
+    </div>
   </div>
+
+  <ion-modal 
+    #modal 
+    [isOpen]="isModalOpen" 
+    [initialBreakpoint]="0.6" 
+    handleBehavior="cycle" 
+    [breakpoints]="[0, 0.6, 0.9]"
+    (didDismiss)="onModalDismiss()">
+    <ng-template>
+      <ion-content>
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-t-3xl px-6 py-8 h-full flex flex-col shadow-2xl relative">
+          
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <ion-icon name="business" class="text-white text-2xl"></ion-icon>
+            </div>
+            
+            <h2 class="text-gray-900 text-2xl font-bold mb-2">Bienvenido</h2>
+            <p class="text-gray-600 text-sm leading-relaxed max-w-sm mx-auto">
+              Accede a tu dashboard personalizado y gestiona tu soporte técnico de manera eficiente.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-4 mb-8">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-2">
+                <ion-icon name="flash" class="text-blue-600 text-lg"></ion-icon>
+              </div>
+              <p class="text-gray-700 text-xs font-medium">Rápido</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-2">
+                <ion-icon name="shield-checkmark" class="text-green-600 text-lg"></ion-icon>
+              </div>
+              <p class="text-gray-700 text-xs font-medium">Seguro</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-2">
+                <ion-icon name="trending-up" class="text-purple-600 text-lg"></ion-icon>
+              </div>
+              <p class="text-gray-700 text-xs font-medium">Eficiente</p>
+            </div>
+          </div>
+    
+          <div class="space-y-4">
+            <ion-button 
+              (click)="onLogin()" 
+              expand="block" 
+              class="h-14 text-base font-bold shadow-lg"
+              style="--background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); --background-activated: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); --background-hover: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); --color: white; --border-radius: 12px;">
+              <ion-icon name="log-in-outline" slot="start"></ion-icon>
+              INICIAR SESIÓN
+            </ion-button>
+    
+            <ion-button 
+              (click)="onRegister()" 
+              expand="block" 
+              fill="outline" 
+              class="h-14 text-base font-semibold"
+              style="--border-color: #3b82f6; --color: #3b82f6; --background: transparent; --background-activated: rgba(59, 130, 246, 0.1); --background-hover: rgba(59, 130, 246, 0.1); --border-radius: 12px; --border-width: 2px;">
+              <ion-icon name="person-add-outline" slot="start"></ion-icon>
+              CREAR CUENTA
+            </ion-button>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-gray-200">
+            <p class="text-center text-gray-500 text-xs">
+              Más de <span class="font-semibold text-blue-600">500 empresas</span> confían en nosotros
+            </p>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 
 </ion-content>
