@@ -1,13 +1,13 @@
 <ion-header [translucent]="true"> 
   <ion-toolbar>
-    <!-- <div class="flex items-center justify-between px-4 py-2">
+    <div class="flex items-center justify-between px-4 py-2">
       <div class="flex items-center space-x-3">
         <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: var(--ion-color-primary);">
           <ion-icon name="home-outline" class="text-lg"></ion-icon>
         </div>
-        <h1 class="font-bold text-xl tracking-wide">Mi App modificado 4</h1>
+        <h1 class="font-bold text-xl tracking-wide">Mi App</h1>
       </div>
-
+      <ion-toggle [(ngModel)]="paletteToggle" (ionChange)="toggleChange($event)" justify="space-between">Dark Mode</ion-toggle>
       <div class="flex items-center space-x-3">
         <ion-button fill="clear" size="small">
           <ion-icon name="notifications-outline" slot="icon-only"></ion-icon>
@@ -17,7 +17,6 @@
         </ion-button>
       </div>
       
-    </div>   -->
-    <ion-title>Testing a</ion-title>
+    </div>  
   </ion-toolbar>
 </ion-header>

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonModal, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { Router } from '@angular/router';
-import { logoIonic, homeOutline, notificationsOutline,time,checkmark, people,settingsOutline, searchOutline, heartOutline, personOutline, shieldOutline, arrowForwardOutline, trophyOutline, peopleOutline, documentTextOutline, chevronForwardOutline, cameraOutline, shareOutline, checkmarkOutline, addOutline, mailOutline, analyticsOutline, starOutline, businessOutline, shieldCheckmark, rocketOutline, flash, trendingUp, logInOutline, personAddOutline } from 'ionicons/icons';
+import { logoIonic, homeOutline, notificationsOutline,time,business,checkmark, people,settingsOutline, searchOutline, heartOutline, personOutline, shieldOutline, arrowForwardOutline, trophyOutline, peopleOutline, documentTextOutline, chevronForwardOutline, cameraOutline, shareOutline, checkmarkOutline, addOutline, mailOutline, analyticsOutline, starOutline, businessOutline, shieldCheckmark, rocketOutline, flash, trendingUp, logInOutline, personAddOutline } from 'ionicons/icons';
 import { register } from 'swiper/element/bundle';
 register();
 
@@ -13,7 +13,7 @@ register();
   templateUrl: './welcome-page.page.html',
   styleUrls: ['./welcome-page.page.scss'],
   standalone: true,
-  imports: [IonButton, IonIcon ,IonContent, CommonModule, FormsModule, IonModal],
+  imports: [IonButton, IonIcon, IonContent, CommonModule, FormsModule, IonModal],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class WelcomePagePage implements OnInit {
@@ -24,7 +24,7 @@ export class WelcomePagePage implements OnInit {
   
   constructor(private router: Router) { 
     // this.lockOrientation();
-    addIcons({peopleOutline,checkmark,analyticsOutline,businessOutline,shieldCheckmark,time,people,rocketOutline,flash,trendingUp,logInOutline,personAddOutline,trophyOutline,documentTextOutline,chevronForwardOutline,cameraOutline,shareOutline,checkmarkOutline,addOutline,mailOutline,settingsOutline,starOutline,arrowForwardOutline,homeOutline,notificationsOutline,shieldOutline,searchOutline,heartOutline,personOutline,logoIonic}); 
+    addIcons({peopleOutline,checkmark,analyticsOutline,business,shieldCheckmark,time,people,rocketOutline,flash,trendingUp,logInOutline,personAddOutline,trophyOutline,documentTextOutline,chevronForwardOutline,cameraOutline,shareOutline,checkmarkOutline,addOutline,mailOutline,settingsOutline,starOutline,arrowForwardOutline,homeOutline,notificationsOutline,shieldOutline,searchOutline,heartOutline,personOutline,logoIonic}); 
   }
 
   onLogin(){
